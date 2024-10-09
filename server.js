@@ -6,10 +6,10 @@ import cookieParser from "cookie-parser";
 dotenv.config();
 import cors from "cors";
 
-// import { notFound, errorHandler } from "./middleware/errorMiddleware.js";
+import { notFound, errorHandler } from "./middleware/errorMiddleware.js";
 const PORT = process.env.PORT || 5000;
 
-// connectDB();
+connectDB();
 
 const app = express();
 // app.use(cors());
@@ -19,9 +19,9 @@ const app = express();
 // app.use(express.json());
 // app.use(express.urlencoded({ extended: true }));
 
-// app.use("/api/users", userRoutes);
-// app.use(notFound);
-// app.use(errorHandler);
+app.use("/api/users", userRoutes);
+app.use(notFound);
+app.use(errorHandler);
 app.get("/", async (req, res) => res.send("server is ready"));
 
 app.listen(PORT, () => console.log("server started on port ", PORT));
