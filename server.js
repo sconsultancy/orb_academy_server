@@ -20,7 +20,7 @@ const app = express();
 // app.use(express.urlencoded({ extended: true }));
 
 app.use("/api/users", userRoutes);
-app.use(notFound);
+// app.use(notFound);
 // app.use(errorHandler);
 app.get("/", async (req, res) => res.send("server is ready"));
 
