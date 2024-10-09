@@ -21,7 +21,7 @@ const app = express();
 
 app.use("/api/users", userRoutes);
 app.use(notFound);
-app.use(errorHandler);
+// app.use(errorHandler);
 app.get("/", async (req, res) => res.send("server is ready"));
 
 app.listen(PORT, () => console.log("server started on port ", PORT));
