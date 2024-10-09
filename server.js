@@ -6,7 +6,7 @@ import cookieParser from "cookie-parser";
 dotenv.config();
 import cors from "cors";
 
-import { notFound, errorHandler } from "./middleware/errorMiddleware.js";
+// import { notFound, errorHandler } from "./middleware/errorMiddleware.js";
 const PORT = process.env.PORT || 5000;
 
 connectDB();
